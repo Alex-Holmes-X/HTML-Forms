@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>List of all the different ways to create forms in HTML</h1>
+
+    <form action="">
+        <p>This is a standard text box used for regular text</p>
+        <label for="text">Text Box</label>
+        <input type="text" id="text">
+
+        <p>This text box includes validation attributes Min 5 / Max 10 letters
+            along with the required attribute (must be filled in)
+        </p>
+        <label for="text">Text Box</label>
+        <input type="text" id="text" maxlength="10" minlength="5" required>
+
+        <p>This is how you create a password box, the text will be hashed</p>
+        <label for="password">Password</label>
+        <input type="password" id="password">
+
+        <p>This password box includes validation, only numbers and letters for password
+            no special characters
+        </p>
+        <label for="password">Password</label>       <!-- This selects only letters and numbers -->
+                                                    <!-- and must be between 5 + 10 characters  -->
+        <input type="password" id="password" pattern="[a-z A-Z 0-9]{5,10}">
+
+        <p>This is how you create a number box, this also has a 1 step included and 
+            has a max & min set rto
+        </p>
+        <label for="number">Number</label>
+        <input type="number" id="number" step="1" min="1" max="5">
+
+        <p>This is how you create a range, this also has a .5 step included along with 
+            a min and max attribute
+        </p>
+        <label for="range">Range Slider</label><br>
+        <!-- Putting the input inside span has set the start and finnish of the slider -->
+        <span>0</span>
+        <input type="range" id="range" step=".5" min="0" max="5">
+        <span>10</span>
+        
+        <br>
+        <br>
+        <p>This is a checkbox, multiple items can be selected</p>
+        <p> - When creating a checkbox, use a label to create the option and an input.
+            The label is just there to show the text, the actual value sent is from the 
+            value attribute in the input element</p>
+        <label for="checkbox">Option 1</label>
+        <input type="checkbox" id="option1" value="option1" name="options"><br>
+        <label for="checkbox">Option 2</label>
+        <input type="checkbox" id="option2" value="option1" name="options"><br>
+        <label for="checkbox">Option 3</label>
+        <input type="checkbox" id="option3" value="option1" name="options"><br>
+        <label for="checkbox">Option 4</label>
+        <input type="checkbox" id="option4" value="option1" name="options"><br>
+        <label for="checkbox">Option 5</label>
+        <input type="checkbox" id="option5" value="option1" name="options"><br>
+
+        <p>These are radio buttons, only one can be selected as long as they are grouped
+            together using the same name attribute.
+        </p>
+        <label for="radio" id="button">Radio Button 1</label>
+        <input type="radio" id="selection1" value="selection1" name="selections"><br>
+        <label for="radio" id="button">Radio Button 2</label>
+        <input type="radio" id="selection2" value="selection1" name="selections"><br>
+        <label for="radio" id="button">Radio Button 3</label>
+        <input type="radio" id="selection3" value="selection1" name="selections"><br>
+        <label for="radio" id="button">Radio Button 4</label>
+        <input type="radio" id="selection4" value="selection1" name="selections"><br>
+
+        <p>These are drop down box options</p>
+        <label for="dropdown">Dropdown box options</label>
+        <select name="dropdown" id="ddoption">
+            <option value="item1">Item 1</option>
+            <option value="item2">Item 2</option>
+            <option value="item3">Item 3</option>
+            <option value="item4">Item 4</option>
+            <option value="item5">Item 5</option>
+        </select>
+
+
+        <!-- Be sure to link the "List" in the input and the "id" in the datalist -->
+        <p>This is a Datalist, this shows options but lets the user enter text as well</p>
+        <p>make sure the list attribute of the input element and the id of the datalist element match
+            to make sure this works
+        </p>
+        <label for="datalist">Data List</label>
+        <input type="text" id="datalist" list="datalists" name="datalist">
+        <datalist id="datalists">
+            <option value="option1"></option>
+            <option value="option2"></option>
+            <option value="option3"></option>
+        </datalist>
+
+        <p>This is a customisable text area, the cols + rows can be modified,
+            there is also a "Placeholder" added which puts text inside the box that 
+            will dissapear when the user enters any text
+        </p>
+        <textarea name="textarea" id="text" cols="30" rows="10" placeholder="Enter text here!"></textarea>
+
+        <p>Submit button, this can be added at the end of the form to send the information</p>
+        <input type="submit" value="Send it!">
+
+    </form>
+
+    
+</body>
+</html>

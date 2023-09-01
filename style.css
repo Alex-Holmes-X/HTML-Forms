@@ -1,0 +1,10 @@
+p {
+    color: rgb(1, 78, 141);
+    font-weight: bold;
+}
+
+/* ids use hash (#) classes use .class-name (full stop)*/
+#button  {
+    color: #cc00b7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
